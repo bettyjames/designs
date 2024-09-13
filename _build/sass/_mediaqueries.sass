@@ -1,0 +1,26 @@
+$desktop-width: 1000px
+// only use in specail cases
+$tablet-width: 600px
+$mobile-width: 400px
+
+@mixin desktop
+	@media (min-width: #{$desktop-width})
+		@content
+
+@mixin touch
+	@media (pointer: coarse)
+		@content
+
+@mixin small
+	@media (max-width: #{$desktop-width})
+		@content
+
+// only use in specail cases
+
+@mixin tablet
+	@media (min-width: #{$tablet-width})
+		@content
+
+@mixin mobile
+	@media (max-width: #{$mobile-width})
+		@content

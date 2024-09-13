@@ -1,0 +1,103 @@
+@mixin styling($base-size)
+
+	.script
+		font-family: textScript
+		font-size: $base-size * $ms13
+		font-weight: normal
+		transform: rotate(-8deg)
+		margin-left: -$base-size * $ms-5
+		margin-top: $base-size * $ms-2
+		margin-bottom: $base-size * $ms11
+	.about 
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include desktop
+			flex-wrap: wrap
+			justify-content: center
+			align-content: center
+			max-height: 120vh
+
+		.usGroup
+			max-width: $base-size * $ms10 * 10
+			@include desktop
+				max-width: $base-size * $ms10 * 10
+				margin-right: $base-size * $ms10
+				width: 55%
+				min-height: 80vh
+				flex: 2
+				order: -1
+
+		.textFrame
+			@include desktop
+				width: 35%
+				max-width: $base-size * $ms10 * 8
+
+
+	.cardGroup
+		position: relative
+		.cardBG
+			padding: $base-size * $ms-6
+	
+			line-height: 0rem
+			background-image: url(/img/craft.jpg)
+			background-repeat: repeat
+			background-color: white
+			background-size: 512px
+			background-size: 512px
+
+			position: relative
+
+		.cardImg
+			width: 100%
+			mix-blend-mode: multiply
+
+		.blob-green
+			width: 90%
+			left: 15%
+			top: -50%
+			position: absolute
+			z-index: -1
+			@include desktop
+				top: -30%
+		.blob-peach
+			width: 120%
+			left: 10%
+			top: 90%
+			position: absolute
+		.dots
+			position: absolute
+	.richard
+		width: 55%
+		.dots
+			left: 30%
+			top: 70%
+			@include desktop
+				width: 70%
+				top: 100%
+	.angharad
+		width: 70%
+		left: 30%
+		margin-top: -30%
+		margin-bottom: $base-size * $ms12
+		@include tablet 
+			
+			margin-bottom: $base-size * $ms16
+		@include desktop 
+			margin-top: -20%
+			margin-bottom: $base-size * $ms10
+		.dots
+			width: 80%
+			left: 20%
+			top: -20%
+			z-index: -1
+			@include desktop
+				width: 60%
+				left: 10%
+
+
+
+
+
+@import "_mediamixin"

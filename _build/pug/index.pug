@@ -1,0 +1,26 @@
+doctype html
+html(class='no-js home' lang='')
+  head
+    include part/_head.pug
+    title Betty James Designs
+    meta(name='description' content='')
+    
+  script(src='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js' data-cfasync='false')
+
+  body
+    //
+      [if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]
+    header
+      include part/_nav.pug
+    
+    // modular
+    include modular/_hero.pug
+    include modular/_text.pug
+  
+    //footer
+    include part/_footer.pug
+  
+    //scripts
+    include part/_scripts.pug

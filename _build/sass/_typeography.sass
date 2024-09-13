@@ -1,0 +1,70 @@
+
+
+@mixin styling($base-size) 
+ 
+	body
+		font-family: futura-pt, sans-serif;
+		font-weight: 400
+		font-style: normal
+		font-size: $base-size * $ms1
+		line-height: $base-size * $ms5	
+		color: $colour-primary
+	a 
+		color: $colour-primary
+		cursor: pointer
+	p, h1, h2, h3, h4, h5
+		max-width: $base-size * $ms10 * 10
+		margin-top:	0
+		margin-bottom: $base-size * $ms6
+		display: block
+		a 
+			&:hover
+				background-color: $colour-secondary
+	h1, h2, h3, nav
+		font-family: headingBold, serif
+	h1
+		font-size: $base-size * $ms11
+		line-height: $base-size * $ms12
+		margin-bottom: $base-size * $ms6
+		@include small
+			font-size: $base-size * $ms9
+			line-height: $base-size * $ms11
+	h2 
+		font-size: $base-size * $ms4
+		line-height: $base-size * $ms7
+		margin-bottom: $base-size * $ms6
+		//transform: translateX(200px)
+	h3
+		font-size: $base-size * $ms2
+		line-height: $base-size * $ms5
+		margin-bottom: $base-size * $ms5
+	h4
+		font-family: futura-pt-bold, sans-serif
+		font-size: $base-size * $ms-2
+		line-height: $base-size * $ms2
+		margin-bottom: $base-size * $ms3
+		font-weight: 700
+		text-transform: uppercase
+		display: inline-block
+		position: relative
+		z-index: 0
+		&:before 
+			content: ""
+			top: 0%
+			left: 10%
+			width: 95%
+			height: 45%
+			background: $colour-secondary
+			position: absolute
+			display: block
+			z-index: -1
+		a 
+			text-decoration: none
+
+	p 
+		margin-bottom: $base-size * $ms4
+		a 
+			font-family: futura-pt, sans-serif;
+			font-weight: 500
+
+@import "_mediamixin"

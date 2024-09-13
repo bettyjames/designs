@@ -1,0 +1,110 @@
+@mixin styling($base-size)
+
+	footer
+		width: 100%
+		margin-top: $base-size * $ms20
+
+		display: flex
+		flex-direction: column
+		align-items: center
+
+
+		background-image: url(/img/craft.jpg)
+		background-repeat: repeat
+		background-color: grey
+		background-size: 512px
+		background-size: 512px
+
+		outline: 3px solid $colour-primary
+		outline-offset: -$base-size * $ms3 
+
+		.basedIn
+			
+			text-align: center
+
+			p 
+				margin: 0
+		.logo
+			width: $base-size * $ms20
+			margin-top: -$base-size * $ms15
+			left: -$base-size * $ms-6
+			margin-bottom: $base-size * $ms5
+
+			position: relative
+
+
+		h3
+			margin-bottom: 0
+
+
+
+	.contactLockup
+		
+		transform: skewY(-10deg)
+		margin-top: $base-size * $ms3
+		@include mobile
+			align-self: flex-start
+		
+
+		.sayHi
+			background: $colour-secondary
+
+			left: $base-size * $ms10
+			padding: 1% $base-size * $ms-3
+
+			display: inline-block
+			position: relative
+			z-index: 1
+
+		.lockupEmail
+			font-family: 'IM Fell DW Pica', serif
+			font-size: $base-size * $ms6
+			text-decoration: none
+			cursor: pointer
+
+			top: -$base-size * $ms-3
+
+			color: $colour-primary
+			background: $colour-secondary
+			padding: $base-size * $ms0 $base-size * $ms3
+
+			display: inline-block
+			position: relative
+
+			&:hover
+				text-decoration: underline
+
+		.navSocial
+			margin: 0
+			margin-bottom: $base-size * $ms12
+
+			a
+				color: $colour-primary
+				margin: 0
+				margin-left: $base-size * $ms-5
+				float: right
+
+			@include desktop
+				margin-bottom: 0
+				font-size: $base-size * $ms6
+
+
+	.footnote
+		padding: 0 $base-size * $ms2
+		display: flex
+		justify-content: center
+		order: 2
+
+
+		a
+			font-size: $base-size * $ms-2
+			text-transform: uppercase
+			line-height: 0
+			padding: $base-size * $ms8 0
+			text-decoration: none
+			color: $colour-primary
+			&:hover
+				text-decoration: underline
+		
+
+@import "_mediamixin"
